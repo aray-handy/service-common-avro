@@ -1,0 +1,25 @@
+{ 
+    "type" : "record",
+    "name" : "CreditsCreated",
+    "fields" : [
+      {"name" : "message_event", "type" : "string"},
+      {"name" : "major_version", "type" : "int"},
+      {"name" : "minor_version", "type" : "int"},
+      {"name" : "transaction_id", "type" : "string"},
+      {"name" : "credit", "type" : {
+          "type" : "record",
+          "name" : "Credit",
+          "fields" : [
+              {"name" : "user_id", "type" : "int"},
+              {"name" : "is_refundable", "type" : "boolean"},
+              {"name" : "amount", "type" : "int"},
+              {"name" : "currency_code", "type" : "string"},
+              {"name" : "bus_object_id", "type" : "int"},
+              {"name" : "bus_object_type", "type" : "string"},
+              {"name" : "note", "type" : "string"},
+              {"name" : "type", "type" : "string"}
+             ]
+        }
+    }
+  ]
+}
